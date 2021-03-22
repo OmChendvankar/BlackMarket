@@ -18,7 +18,7 @@ class RemoveCooldown extends Command {
     public function __construct(Test $main){
         $this->main = $main;
         
-        parent::_construct('commandname', 'command description');
+        parent::__construct('commandname', 'command description');
         $this->setPermission('blackmarket.remove.cooldown');
     }
 
