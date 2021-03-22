@@ -1,9 +1,10 @@
 <?php
 
 
-namespace Om\Commands;
+namespace om\Commands;
 
-use Om\Test;
+use FolderPluginLoader\Main;
+use om\Test;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
@@ -14,11 +15,11 @@ class RemoveCooldown extends Command {
 
     /** @var Main **/
     private $main;
-    
+
     public function __construct(Test $main){
         $this->main = $main;
-        
-        parent::__construct('commandname', 'command description');
+
+        parent::__construct('remecooldown', '§bremoves cooldown of the player');
         $this->setPermission('blackmarket.remove.cooldown');
     }
 
@@ -28,7 +29,7 @@ class RemoveCooldown extends Command {
         }
     }
 
-    public function onCommand(CommandSender $sender, Command $cmd, String $label, Array $args) {
+    public function execute(CommandSender $sender, String $label, Array $args) {
         if(!$sender instanceof Player){
             $sender->sendMessage("Run the command in game");
             return false;
@@ -44,15 +45,16 @@ class RemoveCooldown extends Command {
             return false;
         }
 
-        if($this->getServer()->getPlayer($args[0]) === null or !$this->getServer()->getPlayer($args[0])->isOnline()){
+        if($this->main->getServer()->getPlayer($args[0]) === null or !$this->main->getServer()->getPlayer($args[0])->isOnline()){
             $sender->sendMessage("Player is not online");
             return false;
         }
 
-        $target = $this->getServer()->getPlayer($args[0]);
+        $target = $this->main->getServer()->getPlayer($args[0]);
         $this->removeCooldown($target);
         $sender->sendMessage($target->getName() . "'s cooldown has been removed");
     }
+
 
 
 }
