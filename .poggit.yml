@@ -5,6 +5,7 @@ branches:
 projects:
   BlackMarket:
     path: BlackMarket/
+    icon: icon.png
     libs:
     - src: muqsit/InvMenu/InvMenu
       branch: master
