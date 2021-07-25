@@ -1,0 +1,12 @@
+name: BlackMarket
+main: om\Test
+author: Om
+api: 3.0.0
+version: 1.0.0
+depend:
+- EconomyAPI
+
+permissions:
+  blackmarket.remove.cooldown:
+    description: removes cooldown
+    default: op
