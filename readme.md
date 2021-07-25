@@ -51,7 +51,7 @@ Cost3: 10
 </details>
 
 ---
-##Commands
+## Commands
 | Command        | Description           |  
 | ------------- |:--------------|  
 | /bm, /blackmarket | BlackMarket main command, opens the menu|   
