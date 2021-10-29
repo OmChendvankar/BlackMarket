@@ -24,7 +24,7 @@ Download the plugin from [GitHub Releases](https://github.com/OmChendvankar/ADVB
     <summary>Click to open</summary>
 
 ```yaml
-#Items you want to put in the BlackMarket
+#Items you want to put in the BM
 #you have to mention the Id,Metadata and amount of the specfic item you can refer to https://minecraft-ids.grahamedgecombe.com/
 #ByDefault its Wooden, Iron and Diamond Sword as Item1,Item2 and Item3 respectively.
 #Item1 Data
@@ -40,7 +40,7 @@ Item3_Id: 276
 Item3_Meta: 0
 Item3_Amt: 1
 
-#Cost of the Item you put in BlackMarket
+#Cost of the Item you put in BM
 #Cost of Item1
 Cost1: 10
 #Cost of Item2
